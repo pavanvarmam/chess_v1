@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess.js</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/chessboard.css">
+    <link rel="stylesheet" href="/styles/game.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/js/chessboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/online/game.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- This is game over layout -->
+        <section class="game-over-prompt d-none">
+            <div class="game-over-container bg-light rounded-2">
+                <p class="game-over fs-1 text-success fw-bold">Game Over!</p>
+                <p class="game-over-type fs-3 text-secondary border-bottom"></p>
+                <div class="game-over-winner-container text-center">
+                    <p class="game-winner fs-2 text-primary fw-bold"></p>
+                    <p class="game-looser fs-5 text-danger fw-lighter"></p>
+                    <button class="home-btn btn btn-dark">Home</button>
+                    <button class="view-board-btn btn btn-primary">View Board</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- This is pp modal layout -->
+        <section class="pp-prompt d-none">
+            <div class="pp-container">
+                <div class="pp-piece" data-piece="r">
+                    <img src="/svg/bR.svg" alt="">
+                </div>
+                <div class="pp-piece" data-piece="n">
+                    <img src="/svg/bN.svg" alt="">
+                </div>
+                <div class="pp-piece" data-piece="b">
+                    <img src="/svg/bB.svg" alt="">
+                </div>
+                <div class="pp-piece" data-piece="q">
+                    <img src="/svg/bQ.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- This is main layout -->
+        <section class="board-layout-main">
+            <div class="board-layout-container">
+                <div class="board-layout-player b-board-layout-player row">
+                    <div class="board-layout-player-left col-10">
+                        <div class="board-layout-player-name"></div>
+                        <div class="board-layout-player-captures b-captures"></div>
+                    </div>
+                    <div class="board-layout-player-right col-2">
+                        <div class="board-layout-player-timer"></div>
+                        <div class="board-layout-player-info"></div>
+                    </div>
+                </div>
+                <div id="board" class="board-layout-chessboard"></div>
+                <div class="board-layout-player w-board-layout-player row">
+                    <div class="board-layout-player-left col-10">
+                        <div class="board-layout-player-name"></div>
+                        <div class="board-layout-player-captures w-captures"></div>
+                    </div>
+                    <div class="board-layout-player-right col-2">
+                        <div class="board-layout-player-timer"></div>
+                        <div class="board-layout-player-info"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
